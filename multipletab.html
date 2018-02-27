@@ -7,26 +7,6 @@
           
          <input type="button" name="clickbtn" value="Start Execution" onclick="start()">
 	<input type="button" name="clickbtn2" value="Stop Execution" onclick="stop()">
-        <script type="text/javascript">
-	// var linksArray =['win1','win2','win3','win4','win5'],i;
-		var f=false;
-                    function start() {
-
-            
-		var win1=window.open("www.google.com", '_blank');
-		var win2=window.open("www.google.com", '_blank');
-		var win3=window.open("www.google.com", '_blank');
-		var win4=window.open("www.google.com", '_blank');
-		var win5=window.open("www.google.com", '_blank');
-		setTimeout(function(){ if(!f){win1.close();}else{return;}}, 1000);
-		setTimeout(function(){ if(!f){win2.close();}else{return;}}, 2000);
-		setTimeout(function(){ if(!f){win3.close();}else{return;}}, 3000);
-		setTimeout(function(){ if(!f){win4.close();}else{return;}}, 4000);
-		setTimeout(function(){ if(!f){win5.close();}else{return;}}, 5000); 
+        <script type="text/javascript" src="que3.js">
 		
-        }
-		 function stop() {
-			f=true;
-            	
-        }
         </script>
