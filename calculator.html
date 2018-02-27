@@ -1,0 +1,62 @@
+<body>
+    <div>
+        <div>
+            <h1>Calculator</h1>
+        </div>
+            Enter First Number : <br>
+            <input type="text" id="Text1" name="TextBox1">
+            <br>
+            Enter Second Number : <br>
+            <input type="text" id="Text2" name="TextBox2">
+            <br>
+            Result : <br>
+            <p id="p1"></p>
+            <br>
+         <input type="button" name="clickbtn" value="Addition" onclick="add_number()">
+	<input type="button" name="clickbtn2" value="Subtraction" onclick="sub_number()">
+        <script type="text/javascript">
+                    function add_number() {
+
+            var first_number = parseInt(document.getElementById("Text1").value);
+            var second_number = parseInt(document.getElementById("Text2").value);
+            var result = first_number + second_number;
+	    var reg = new RegExp('^[0-9]+$');
+	    hash1=document.getElementById("Text1").value;
+            hash2=document.getElementById("Text2").value
+		if(reg.test(hash1) && reg.test(hash2) )
+		{	    
+	            document.getElementById("p1").innerHTML = "the sum is " + result;
+		}
+		else if(hash1.length<1 && hash2.length<1)
+		{
+			document.getElementById("p1").innerHTML = "Please enter any number";
+		}		
+		else
+		{
+			document.getElementById("p1").innerHTML = "Wrong input";
+		}
+        }
+		 function sub_number() {
+
+            var first_number = parseInt(document.getElementById("Text1").value);
+            var second_number = parseInt(document.getElementById("Text2").value);
+            var result = first_number-second_number;
+	    var reg = new RegExp('^[0-9]+$');
+	    hash1=document.getElementById("Text1").value;
+            hash2=document.getElementById("Text2").value
+		if(reg.test(hash1) && reg.test(hash2) )
+		{	    
+	             document.getElementById("p1").innerHTML = "the difference is " + result;
+		}
+		else if(hash1.length<1 && hash2.length<1)
+		{
+			document.getElementById("p1").innerHTML = "Please enter any number";
+		}		
+		else
+		{
+			document.getElementById("p1").innerHTML = "Wrong input";
+		}
+
+           
+        }
+        </script>
